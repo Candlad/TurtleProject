@@ -1,13 +1,19 @@
 <?php
-
-
-function VolumeSphere ($rayon)
-
-{
-    $volume = $rayon * $rayon * $rayon * 3.14 * (1/3);
-    return $volume ; }
-
-  $volume = VolumeSphere(4);
-
-echo " $volume";
-
+/**
+ * @param int $rayon
+ * @return float
+ */
+function calculerSurfaceSphere(int $rayon) : float {
+    if ($rayon >= 0) {
+        return $rayon ** 2 * pi() * 4;
+    }
+    return false;
+}
+function calculerVolumeSphere($rayon) {
+    if ($rayon >= 0) {
+        return 4/3 * pi() * $rayon ** 3;
+    }
+    else {
+        return false;
+    }
+}
