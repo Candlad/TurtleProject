@@ -1,24 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Martin Patez
- * Date: 09/04/2018
- * Time: 14:56
- */
-echo "<h1>The turtle project</h1>";
+include "./classes/Voiture.php";
+
+$voiture1 = new Voiture("Jaune", "Ford",5000000,58528569222);
+
+//$voiture1 -> couleur = "Gruik";
+//$voiture1 -> marque = "Washwuntai";
+//$voiture1 -> masse = 900;
+//$voiture1 -> puissance = 150000;
 
 
-    $message = "<ul>";
+ var_dump($voiture1);
 
-for ($nouille = -17827; $nouille <= 14568; $nouille += 7 ) {
-    if ($nouille % 27 == 0) {
-
-     $message .= "<li>";
-     $message .= $nouille;
-     $message .= "</li>";
-        }
-    }
-
-$message .= "</ul>";
-
-echo $message;
+echo $voiture1 -> demarrer();
